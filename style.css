@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+:root {
+    --darkGray: rgb(41, 46, 51);
+    --white: #fff;
+    --accents: #ff93cc;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+/*** topbar ***/
+.topbar article {
+    display: flex;
+    justify-content: space-between;
+}
+.topbar {
+    background: var(--darkGray);
+    color: var(--white);
+    padding: 10px 0;
+}
+.topbar i {
+    color: var(--accents);
+}
+.topbar a {
+    margin-left: 20px;
+}
+/*** social ***/
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    padding: 4px;
+    background: var(--white);
+}
+.social a {
+    font-size: 1.5rem;
+}
+.social .fa-facebook-square {
+    color: #4d70a7;
+  }
+  .social .fa-youtube-square {
+    color: #ff2a1a;
+  }
+  .social .fa-instagram {
+    color: #cc5295;
+  }
+  .social .fa-pinterest {
+    color: #ff2a1a;
+  }
+/*** nav ***/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+nav ul {
+    display: flex;
+    padding-top: 5px;
+}
+nav .logo {
+    color: var(--accents);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px var(--darkGray);
+}
+nav .logo:hover {
+    color: var(--darkGray);
+    text-shadow: 1px 1px var(--accents);
+}
+nav ul li a {
+    color: var(--darkGray);
+    margin-left: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: var(--accents);
+}
+/*** footer ***/
+footer {
+    padding: 100px 0;
+    background: var(--darkGray);
+    color: var(--white);
+}
+footer article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer h3 {
+    color: var(--accents);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+footer div:nth-child(1) {
+    flex: 0 0 39%;
+}
+footer div:nth-child(2) {
+    flex: 0 0 19%;
+}
+footer div:nth-child(3) {
+    flex: 0 0 39%;
+}
+footer a {
+    color: var(--white);
+}
+footer a:hover {
+    color: var(--accents);
+}
+footer div input {
+    margin: 20px 0 0 0;
+  }
+footer div input,
+footer div input[type="submit"] {
+  background: transparent;
+  border: 2px solid #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  color: #feffff;
+  font-weight: 400;
+}
+footer div input[type="submit"]:hover {
+    color: var(--darkGray);
+    background: var(--white);
+}
+/*** headerIndex ***/
+.headerIndex {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+.headerIndex h1 {
+    font-size: 3.5rem;
+}
+.headerIndex p {
+    font-size: 1.2rem;
+}
+.headerIndex button,
+.headerPonuda button {
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    margin-top: 15px;
+    font-size: .9rem;
+    transition: var(--transition);
+}
+.headerIndex button:hover,
+.headerPonuda button:hover {
+    color: var(--accents);
+    cursor: pointer;
+    border: 2px solid var(--accents);
+}
+/*** headerPonuda ***/
+.headerPonuda {
+    background-image: linear-gradient(rgba(41, 46, 51,.5),rgba(41, 46, 51,.5)),url(img/headers.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    color: var(--white);
+}
+.headerPonuda div {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.headerPonuda h2 {
+    font-size: 3rem;
+}
+.headerPonuda p {
+    font-size: 1.2rem;
+}
+/*** destinacije ***/
+.destinacije {
+    text-align: center;
+    padding: 50px 0;
+}
+.destinacije h2 {
+    font-size: 2.3rem;
+}
+.destinacije p {
+    display: inline-block;
+    padding: 5px 32px;
+    background: var(--accents);
+    color: var(--white);
+    font-size: .7rem;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+}
+.destinacije .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.destinacije .wrapper div {
+    flex: 0 0 30%;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 5px gray;
+    transition: var(--transition);
+    cursor: pointer;
+    
+}
+.destinacije .wrapper div:hover {
+    transform: scale(1.05);
+}
+.destinacije .wrapper img {
+    width: 100%;
+}
+.destinacije .wrapper h5 {
+    color: var(--darkGray);
+    padding: 10px 0;
+    font-size: .8rem;
+    font-weight: 700;
+}
+.destinacije .wrapper i {
+    color: var(--accents);
+    padding: 0 3px;
+}
+/*** promotion ***/
+main h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding-top: 30px;
+}
+main p {
+    text-align: center;
+    font-size: .8rem;
+    padding: 10px 0 20px;
+    font-weight: 400;
+}
+.promotion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px 1px gray;
+    margin-bottom: 50px;
+}
+.promotion article {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.promotion article img {
+    width: 100%;
+}
+.promotion article div {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.promotion article div .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.promotion .row:last-child .text:last-child {
+    order: -1; 
+}
+.promotion .row .text h3 {
+    color: var(--accents);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px var(--darkGray);
+}
+.promotion .row .text p {
+    font-size: .8rem;
+    text-align: center;
+    padding: 0 20px;
+}
+/*** RESPONSIVE ***/
+@media(max-width:768px) {
+    .container {
+        width: 95%;
+    }
+    .topbar article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .topbar a {
+        margin:10px 0;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+    }
+    .headerIndex h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .destinacije h2 {
+        font-size: 2rem;
+    }
+    .destinacije .wrapper div {
+        flex: 0 0 100%;
+    }
+    footer div:nth-child(1) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    footer div:nth-child(2) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    footer div:nth-child(3) {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .headerPonuda h2 {
+        font-size: 2rem;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+    .promotion article {
+        flex: 0 0 100%;
+    }
+}
+
+
+
+
+
+
+
+
